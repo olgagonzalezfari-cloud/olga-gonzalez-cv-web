@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olga González - Currículum Online</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        /* Estilo para las pestañas */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #2c3e50;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            color: #fff;
+            cursor: pointer;
+            background-color: #34495e;
+            border: none;
+            border-bottom: 2px solid #2c3e50;
+            font-size: 1.2em;
+        }
+
+        .tab:hover {
+            background-color: #2980b9;
+        }
+
+        .active-tab {
+            background-color: #2980b9;
+            border-bottom: 2px solid #2980b9;
+        }
+
+        /* Estilo para el contenido de las pestañas */
+        .tab-content {
+            display: none;
+            padding: 30px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Estilo formulario de contacto */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            background-color: #2980b9;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #3498db;
+        }
+
+        /* Estilo footer */
+        footer {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Olga González</h1>
+        <p>Estadística & Análisis de Datos - Cuerpo Superior de Estadísticos del INE</p>
+    </header>
+
+    <!-- Pestañas -->
+    <div class="tabs">
+        <button class="tab active-tab" onclick="showTab('sobre')">Sobre Mí</button>
+        <button class="tab" onclick="showTab('experiencia')">Experiencia</button>
+        <button class="tab" onclick="showTab('habilidades')">Habilidades</button>
+        <button class="tab" onclick="showTab('contacto')">Contacto</button>
+    </div>
+
+    <!-- Contenido de las pestañas -->
+    <div class="tab-content active" id="sobre">
+        <div class="container">
+            <h2>Sobre Mí</h2>
+            <p>Soy una persona apasionada por las matemáticas y los datos. Además de mi formación académica, me encanta el deporte y viajar, lo que me permite mantener un equilibrio saludable entre mi vida personal y profesional. Tras obtener un máster en Big Data Analytics, decidí orientar mi carrera hacia el análisis de datos y la estadística, y en 2023 aprobé la oposición para formar parte del Instituto Nacional de Estadística (INE) como parte del Cuerpo Superior de Estadísticos.</p>
+        </div>
+    </div>
+
+    <div class="tab-content" id="experiencia">
+        <div class="container">
+            <h2>Experiencia</h2>
+            <ul>
+                <li><strong>2019-2022: Data Scientist</strong> - Empresa Privada de Análisis de Datos</li>
+                <p>Durante estos años trabajé como Data Scientist, desarrollando soluciones de análisis y modelado predictivo con herramientas como Python, SQL y Big Data, para empresas de sectores variados.</p>
+
+                <li><strong>2023: Cuerpo Superior de Estadísticos, INE</strong> - Instituto Nacional de Estadística</li>
+                <p>A partir de 2023, formo parte del INE, donde contribuyo al diseño, análisis y validación de estadísticas oficiales a nivel nacional.</p>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content" id="habilidades">
+        <div class="container">
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Matemáticas y estadísticas avanzadas</li>
+                <li>Programación en Python</li>
+                <li>Análisis de datos y modelado predictivo</li>
+                <li>SQL y bases de datos</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab-content" id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Si deseas ponerte en contacto conmigo, por favor, completa el siguiente formulario o escríbeme directamente a mi correo electrónico: <strong><a href="mailto:olga.gonzalez.farinas@ine.es">olga.gonzalez.farinas@ine.es</a></strong>.</p>
+            
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Tu nombre" required>
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <textarea name="message" placeholder="Tu mensaje" rows="4" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Olga González. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            // Ocultar todas las pestañas
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Eliminar la clase activa de todas las pestañas
+            const tabButtons = document.querySelectorAll('.tab');
+            tabButtons.forEach(button => button.classList.remove('active-tab'));
+
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabId).classList.add('active');
+
+            // Marcar el botón de la pestaña como activo
+            const activeButton = Array.from(tabButtons).find(button => button.textContent.toLowerCase() === tabId);
+            activeButton.classList.add('active-tab');
+        }
+    </script>
+    
+</body>
+</html>
